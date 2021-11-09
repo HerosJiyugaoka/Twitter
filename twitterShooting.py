@@ -116,6 +116,7 @@ csv_list = read_csv()
 
 diff_list=list_diff(result, csv_list)
 
+#更新があったらそれをTweet、slackにも。
 if diff_list != []:
     send_to_slack(diff_list)
     hp_tweet(diff_list)
